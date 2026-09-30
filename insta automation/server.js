@@ -29,7 +29,7 @@ if (!fs.existsSync(LEADS_FILE)) {
   fs.writeFileSync(LEADS_FILE, JSON.stringify([], null, 2));
 }
 
-const server = http.createServer((req, res) => {
+const requestHandler = (req, res) => {
   const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
   let reqPath = decodeURI(parsedUrl.pathname);
 
@@ -213,10 +213,23 @@ const server = http.createServer((req, res) => {
     });
     fs.createReadStream(normalizedPath).pipe(res);
   });
-});
+};
 
-server.listen(PORT, () => {
-  console.log(`AUTOGRAM Instagram DM Automation platform running at:`);
-  console.log(`- http://localhost:${PORT}`);
-  console.log(`- http://localhost:${PORT}/instagram-dm-automation`);
+// Start server on standard ports (3000, 3001, 8080) for instant developer convenience
+const portsToListen = process.env.PORT ? [parseInt(process.env.PORT, 10)] : [3000, 3001, 8080];
+let activeServers = 0;
+
+portsToListen.forEach(port => {
+  const s = http.createServer(requestHandler);
+  s.on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+      // Port already in use by another process, skip silently
+    } else {
+      console.error(`Port ${port} error:`, err.message);
+    }
+  });
+  s.listen(port, () => {
+    activeServers++;
+    console.log(`✓ AUTOGRAM running at: http://localhost:${port}`);
+  });
 });
