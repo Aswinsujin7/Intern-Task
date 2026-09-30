@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+package-lock.json.backup
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# Runtime Data (Form submissions & dynamic leads)
+leads.json
+
+# Test Artifacts & Automated Verification Screenshots
+*.png
+*.jpg
+*.jpeg
+*.webp
+autogram-*.png
+screenshot-*.png
+canva-preview.png
+
+# Chrome CDP / Playwright / Test Temp Profiles
+autogram-verify-temp/
+.temp/
+tmp/
+temp/
+*.tmp
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE & Code Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+.gemini/
+.agents/
+
+# Logs
+logs/
+*.log
