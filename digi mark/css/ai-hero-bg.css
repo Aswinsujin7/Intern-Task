@@ -1,0 +1,330 @@
+/* ==========================================================================
+   AI ASSISTANT HERO BACKGROUND COMPONENT
+   Futuristic Dashboard Intro: Neon Waveforms, Subtle Grid, Ambient Glows,
+   Film Grain & Floating Glass Chat Bubbles
+   ========================================================================== */
+
+:root {
+  /* Exposed Customizable CSS Properties */
+  --ai-bg-base: #05060a;
+  --ai-grid-color: rgba(255, 255, 255, 0.04);
+  --ai-grid-size: 48px;
+  --ai-grid-opacity: 1;
+
+  --ai-wave-violet: #7c3aed;
+  --ai-wave-blue: #3b82f6;
+  --ai-wave-cyan: #22d3ee;
+
+  --ai-glow-purple: rgba(124, 58, 237, 0.22);
+  --ai-glow-blue: rgba(59, 130, 246, 0.22);
+  --ai-vignette-color: rgba(5, 6, 10, 0.92);
+}
+
+/* Background Host Container (Strictly Background-Only) */
+.ai-hero-bg-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background-color: var(--ai-bg-base);
+  isolation: isolate;
+}
+
+/* 1. Subtle Grid with Radial Edge Fade Mask */
+.ai-hero-grid {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(var(--ai-grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ai-grid-color) 1px, transparent 1px);
+  background-size: var(--ai-grid-size) var(--ai-grid-size);
+  background-position: center center;
+  /* Radial mask so grid smoothly vanishes toward edges */
+  -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, #000 20%, transparent 85%);
+  mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, #000 20%, transparent 85%);
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.ai-hero-grid.loaded {
+  opacity: var(--ai-grid-opacity);
+}
+
+/* 2. Drifting Ambient Glow Orbs */
+.ai-hero-glow-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  will-change: transform;
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.ai-hero-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  opacity: 0.85;
+  will-change: transform;
+}
+
+.ai-hero-glow-orb.orb-purple {
+  top: -12%;
+  left: -8%;
+  width: clamp(380px, 45vw, 650px);
+  height: clamp(380px, 45vw, 650px);
+  background: radial-gradient(circle, var(--ai-glow-purple) 0%, rgba(124, 58, 237, 0.05) 55%, transparent 75%);
+  animation: driftPurple 16s ease-in-out infinite alternate;
+}
+
+.ai-hero-glow-orb.orb-blue {
+  bottom: -15%;
+  right: -5%;
+  width: clamp(420px, 50vw, 700px);
+  height: clamp(420px, 50vw, 700px);
+  background: radial-gradient(circle, var(--ai-glow-blue) 0%, rgba(59, 130, 246, 0.05) 55%, transparent 75%);
+  animation: driftBlue 20s ease-in-out infinite alternate;
+}
+
+@keyframes driftPurple {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(35px, 25px) scale(1.08); }
+  100% { transform: translate(-20px, 40px) scale(0.95); }
+}
+
+@keyframes driftBlue {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-40px, -30px) scale(1.06); }
+  100% { transform: translate(25px, -20px) scale(0.94); }
+}
+
+/* 3. Waveforms HTML5 Canvas */
+.ai-hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  will-change: transform;
+  transition: transform 0.15s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+/* 4. Film Grain Texture (Procedural SVG data-URI) */
+.ai-hero-grain {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  opacity: 0.7;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* 5. Dark Vignette Overlay for Content Readability */
+.ai-hero-vignette {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse 75% 65% at 50% 50%,
+    transparent 20%,
+    rgba(5, 6, 10, 0.55) 65%,
+    var(--ai-vignette-color) 100%
+  );
+  pointer-events: none;
+}
+
+/* 6. Floating Glass Chat Bubbles (3 Depths) */
+.ai-floating-bubbles-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ai-glass-bubble {
+  position: absolute;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(124, 58, 237, 0.12);
+  color: #f1f5f9;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: -0.01em;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.ai-glass-bubble.bubble-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Bubble 1: Top-Left (Depth: Near) */
+.ai-glass-bubble.bubble-1 {
+  top: 18%;
+  left: 6%;
+  animation: floatBubble1 8s ease-in-out infinite alternate;
+  animation-delay: 0.5s;
+}
+
+/* Bubble 2: Right Middle with Typing Dots (Depth: Medium) */
+.ai-glass-bubble.bubble-2 {
+  top: 48%;
+  right: 8%;
+  background: rgba(18, 26, 47, 0.72);
+  border-color: rgba(59, 130, 246, 0.28);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(59, 130, 246, 0.18);
+  animation: floatBubble2 7s ease-in-out infinite alternate;
+  animation-delay: 1.2s;
+}
+
+/* Bubble 3: Bottom Left (Depth: Deep/Subtle) */
+.ai-glass-bubble.bubble-3 {
+  bottom: 14%;
+  left: 12%;
+  background: rgba(12, 18, 34, 0.6);
+  border-color: rgba(34, 211, 238, 0.22);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(34, 211, 238, 0.1);
+  animation: floatBubble3 9s ease-in-out infinite alternate;
+  animation-delay: 1.8s;
+}
+
+@keyframes floatBubble1 {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-14px) rotate(0.8deg); }
+}
+
+@keyframes floatBubble2 {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-16px) rotate(-1deg); }
+}
+
+@keyframes floatBubble3 {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-12px) rotate(0.5deg); }
+}
+
+.ai-bubble-badge {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--ai-wave-violet), var(--ai-wave-cyan));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+.ai-bubble-badge svg {
+  width: 12px;
+  height: 12px;
+}
+
+.ai-bubble-text {
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.ai-bubble-text b {
+  color: var(--ai-wave-cyan);
+}
+
+/* Typing Dots Animation inside Bubble 2 */
+.ai-typing-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 6px;
+}
+
+.ai-typing-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ai-wave-cyan);
+  box-shadow: 0 0 6px var(--ai-wave-cyan);
+  animation: aiDotBounce 1.4s ease-in-out infinite both;
+}
+
+.ai-typing-dot:nth-child(1) { animation-delay: 0s; }
+.ai-typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.ai-typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes aiDotBounce {
+  0%, 80%, 100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+/* --- Responsive & Mobile Adaptations --- */
+@media (max-width: 900px) {
+  .ai-glass-bubble.bubble-1 {
+    top: 10%;
+    left: 4%;
+  }
+  .ai-glass-bubble.bubble-2 {
+    top: 72%;
+    right: 4%;
+  }
+  .ai-glass-bubble.bubble-3 {
+    display: none; /* Hide deepest bubble on smaller tablets to keep clean */
+  }
+}
+
+@media (max-width: 640px) {
+  .ai-glass-bubble {
+    font-size: 0.74rem;
+    padding: 8px 12px;
+  }
+  .ai-glass-bubble.bubble-1 {
+    display: none; /* Keep hero headline ultra clean on mobile */
+  }
+  .ai-glass-bubble.bubble-2 {
+    bottom: 8%;
+    top: auto;
+    right: 50%;
+    transform: translateX(50%) !important;
+  }
+}
+
+/* --- Accessibility: Respect prefers-reduced-motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .ai-hero-glow-orb,
+  .ai-glass-bubble,
+  .ai-typing-dot {
+    animation: none !important;
+    transition: none !important;
+  }
+  .ai-glass-bubble.bubble-visible {
+    opacity: 0.9;
+    transform: none !important;
+  }
+}

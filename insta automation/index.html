@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AUTOGRAM — Instagram DM Automation Platform</title>
+  <meta name="description" content="Turn Instagram conversations into automated growth. Automate customer conversations, answer questions, capture leads, and keep your inbox moving 24/7.">
+  <meta name="keywords" content="AUTOGRAM, Instagram DM Automation, Instagram chatbots, Meta Graph API, lead capture, comment to DM, automated growth">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AUTOGRAM — Turn Instagram Conversations Into Automated Growth">
+  <meta property="og:description" content="Automate customer conversations, answer questions, capture leads, and keep your Instagram inbox moving.">
+  <meta property="og:url" content="https://autogram.ai">
+
+  <!-- Favicon: Yellow A on Navy Blue -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFD21F'><rect width='24' height='24' rx='6' fill='%230B172E'/><path d='M12 4L4 20h3.5l1.8-4h5.4l1.8 4H20L12 4zm0 4.8L13.8 13h-3.6L12 8.8z' fill='%23FFD21F'/></svg>">
+
+  <!-- Google Fonts: Inter & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- AUTOGRAM Stylesheet -->
+  <link rel="stylesheet" href="css/autogram.css">
+</head>
+<body>
+
+  <!-- Subtle Cyber Grid & Ambient Yellow Light -->
+  <div class="autogram-bg-grid" aria-hidden="true"></div>
+  <div class="autogram-ambient-glow" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       1. NAVBAR
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="nav-logo" aria-label="AUTOGRAM Home">
+        <div class="nav-logo-mark">A</div>
+        <span>AUTOGRAM</span>
+      </a>
+
+      <!-- Center Menu -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#howItWorks" class="nav-link">How It Works</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <!-- Right Action CTA -->
+      <div class="nav-actions">
+        <a href="#getStarted" class="btn btn-primary btn-sm">
+          <span>Get Started</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         2. HERO SECTION
+         ========================================================================= -->
+    <!-- =========================================================================
+         2. HERO SECTION (Futuristic AI & Autonomous Technology)
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <!-- Subtle Glowing Canvas Particles in Background -->
+      <canvas id="heroParticlesCanvas" class="hero-particles-canvas" aria-hidden="true"></canvas>
+
+      <!-- Ambient Nebula Blooms (Top Left & Top Right as in reference image) -->
+      <div class="hero-vortex-bloom-left" aria-hidden="true"></div>
+      <div class="hero-vortex-bloom-right" aria-hidden="true"></div>
+
+      <!-- Central Animated Swirling Cosmic Vortex Ring (from reference image) -->
+      <div class="cosmic-vortex-wrapper" id="cosmicVortexWrap" aria-hidden="true">
+        <div class="cosmic-vortex-glow"></div>
+        <div class="cosmic-vortex-ring vortex-ring-outer"></div>
+        <div class="cosmic-vortex-ring vortex-ring-core"></div>
+        <div class="cosmic-vortex-ring vortex-ring-inner"></div>
+      </div>
+
+      <div class="container hero-container-relative">
+        <div class="hero-content hero-content-centered">
+          
+          <div class="badge-tag hero-animate-badge">
+            <span class="badge-dot"></span>
+            <span>AI-POWERED INSTAGRAM AUTOMATION</span>
+          </div>
+
+          <h1 class="hero-title hero-animate-title">
+            Turn Instagram Conversations<br>
+            Into <span class="text-yellow text-glow-yellow">Automated Growth.</span>
+          </h1>
+
+          <p class="hero-desc hero-animate-desc">
+            Automate customer conversations, answer questions, <span class="hero-highlight-yellow">capture leads</span>, and keep your Instagram inbox moving — <span class="hero-highlight-white">without manually replying to every message.</span>
+          </p>
+
+          <div class="hero-ctas hero-animate-ctas">
+            <a href="#demo" class="btn btn-primary btn-lg btn-glow-ai">
+              <span>Try Live Demo</span>
+              <span class="btn-arrow">→</span>
+            </a>
+            <a href="#getStarted" class="btn btn-secondary btn-lg">
+              <span>Get Started</span>
+            </a>
+          </div>
+
+          <div class="hero-subtext hero-animate-subtext">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>No code required for the demo · 100% Shadowban Safe</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. LIVE INTERACTIVE DEMO SECTION
+         ========================================================================= -->
+    <section class="demo-section section-padding" id="demo">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge-tag">
+            <span class="badge-dot"></span>
+            <span>SIMULATED DEMO</span>
+          </div>
+          <h2>See <span class="text-yellow">AUTOGRAM</span> In Action</h2>
+          <p>
+            Explore how automated Instagram conversations can guide customers from their first message to a meaningful next step.
+          </p>
+        </div>
+
+        <div class="demo-simulator-card">
+          <!-- Header -->
+          <div class="sim-header">
+            <div class="sim-brand">
+              <div class="sim-avatar">A</div>
+              <div class="sim-title">
+                <h4>
+                  AUTOGRAM
+                  <span class="verified-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFD21F"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  </span>
+                </h4>
+                <div class="sim-status">Simulated Assistant · Online</div>
+              </div>
+            </div>
+
+            <div class="sim-controls">
+              <span class="sim-tag-pill">Front-End Demo</span>
+              <button class="sim-control-btn" id="simResetBtn" aria-label="Reset Conversation">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                <span>Reset Conversation</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Canvas -->
+          <div class="sim-chat-canvas" id="simChatCanvas" role="log" aria-live="polite">
+            <!-- Initial Message -->
+            <div class="sim-bubble-wrapper bot">
+              <div class="sim-bubble-avatar">A</div>
+              <div class="sim-bubble-content">
+                <div class="sim-bubble">
+                  Hey! 👋 Welcome. How can we help you today?
+                </div>
+                <div class="sim-bubble-time">Just now · Automated Initial Greeting</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Options Bar -->
+          <div class="sim-options-bar">
+            <span class="sim-options-label">Click a simulated option:</span>
+            <div class="sim-buttons-row" id="simOptionsRow">
+              <button type="button" class="sim-quick-btn" data-opt="services">Explore Services</button>
+              <button type="button" class="sim-quick-btn" data-opt="pricing">Pricing</button>
+              <button type="button" class="sim-quick-btn" data-opt="booking">Book a Call</button>
+              <button type="button" class="sim-quick-btn" data-opt="human">Talk to a Human</button>
+            </div>
+          </div>
+
+          <!-- Custom Input -->
+          <div class="sim-input-row">
+            <input 
+              type="text" 
+              id="simTextInput" 
+              class="sim-input-field" 
+              placeholder="Type a message (e.g. pricing, explore services, book a call)..."
+              aria-label="Type message in simulator"
+            >
+            <button type="button" class="sim-send-arrow" id="simSendBtn" aria-label="Send Message">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </div>
+
+          <!-- Disclaimer -->
+          <div class="sim-footer-disclaimer">
+            <span>SIMULATED DEMO — This is a front-end interactive simulation. Not connected to a real Instagram account.</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. HOW IT WORKS SECTION
+         ========================================================================= -->
+    <section class="how-it-works-section section-padding" id="howItWorks">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge-tag">
+            <span class="badge-dot"></span>
+            <span>WORKFLOW</span>
+          </div>
+          <h2>How <span class="text-yellow">AUTOGRAM</span> Works</h2>
+          <p>
+            From the first inbound message to a closed consultation, our intelligent workflow automates every step with speed and precision.
+          </p>
+        </div>
+
+        <div class="workflow-container">
+          <div class="workflow-line-track" aria-hidden="true"></div>
+
+          <div class="workflow-steps-row">
+            <!-- Step 1 -->
+            <div class="step-card">
+              <div class="step-top">
+                <div class="step-number">01</div>
+              </div>
+              <h3>Customer starts a conversation</h3>
+              <p>
+                A customer sends a direct message, mentions your brand in an Instagram Story, or comments on your Reel.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+              <div class="step-top">
+                <div class="step-number">02</div>
+              </div>
+              <h3>AUTOGRAM detects the configured trigger</h3>
+              <p>
+                Our system instantly recognizes keywords, user intent, or comment triggers in real time.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+              <div class="step-top">
+                <div class="step-number">03</div>
+              </div>
+              <h3>AUTOGRAM sends the appropriate response</h3>
+              <p>
+                A personalized response with quick buttons or links is delivered instantly within Meta guidelines.
+              </p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card">
+              <div class="step-top">
+                <div class="step-number">04</div>
+              </div>
+              <h3>Customer reaches the next step</h3>
+              <p>
+                Prospect details are validated, consultation slots booked, or complex inquiries routed to your team.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. AUTOMATION FLOW VISUAL
+         ========================================================================= -->
+    <section class="flow-visual-section section-padding">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge-tag">
+            <span class="badge-dot"></span>
+            <span>END-TO-END PIPELINE</span>
+          </div>
+          <h2>The Automated <span class="text-yellow">Conversation Loop</span></h2>
+          <p>
+            A streamlined journey engineered to guide prospects effortlessly from curiosity to conversion.
+          </p>
+        </div>
+
+        <div class="flow-visual-box">
+          <div class="flow-nodes-wrapper">
+            
+            <div class="flow-node-item active">
+              <div class="flow-node-circle">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <div class="flow-node-label">Instagram Message</div>
+              <div class="flow-node-desc">Inbound DM or Reel Comment</div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true"></div>
+
+            <div class="flow-node-item">
+              <div class="flow-node-circle">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <div class="flow-node-label">Trigger</div>
+              <div class="flow-node-desc">Keyword &amp; Intent Match</div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true"></div>
+
+            <div class="flow-node-item">
+              <div class="flow-node-circle" style="border-color: var(--yellow-primary); color: var(--yellow-primary);">
+                <span style="font-weight: 900; font-size: 1.1rem;">A</span>
+              </div>
+              <div class="flow-node-label">AUTOGRAM</div>
+              <div class="flow-node-desc">Logic &amp; Decision Engine</div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true"></div>
+
+            <div class="flow-node-item">
+              <div class="flow-node-circle">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="flow-node-label">Automated Response</div>
+              <div class="flow-node-desc">Interactive Menu &amp; Links</div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true"></div>
+
+            <div class="flow-node-item">
+              <div class="flow-node-circle">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+              </div>
+              <div class="flow-node-label">Lead Capture</div>
+              <div class="flow-node-desc">Validated Contact Info</div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true"></div>
+
+            <div class="flow-node-item">
+              <div class="flow-node-circle">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <div class="flow-node-label">Human Handoff</div>
+              <div class="flow-node-desc">Live Team Escalation</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. FEATURES SECTION
+         ========================================================================= -->
+    <section class="features-section section-padding" id="features">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge-tag">
+            <span class="badge-dot"></span>
+            <span>CORE CAPABILITIES</span>
+          </div>
+          <h2>Everything Your Instagram <span class="text-yellow">Inbox Needs</span></h2>
+          <p>
+            Powerful modular features built to streamline audience communication, answer questions, and drive conversions effortlessly.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          
+          <!-- Card 1 -->
+          <div class="feature-item-card">
+            <div class="feature-icon-wrapper">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3>Automated Replies</h3>
+            <p>Greet new message senders instantly with welcome menus and self-service inquiry routing.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-item-card">
+            <div class="feature-icon-wrapper">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
+            </div>
+            <h3>Keyword Triggers</h3>
+            <p>Trigger tailored conversational flows when users message words like "PRICING", "DISCOUNT", or "DEMO".</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-item-card">
+            <div class="feature-icon-wrapper">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </div>
+            <h3>Comment-to-DM</h3>
+            <p>Automatically send a private DM with links or resources whenever anyone comments on your Reels or posts.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-item-card">
+            <div class="feature-icon-wrapper">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <h3>FAQ Automation</h3>
+            <p>Resolve routine questions about pricing, availability, and policies 24/7 without manual effort.</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="feature-item-card">
+            <div class="feature-icon-wrapper">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+            </div>
+            <h3>Lead Capture</h3>
+            <p>Collect emails, phone numbers, and project goals conversationally with built-in validation.</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="feature-item-card">
+            <div class="feature-icon-wrapper">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3>Conversation Routing</h3>
+            <p>Intelligently direct messages into categorized funnels based on what the user asks for.</p>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="feature-item-card">
+            <div class="feature-icon-wrapper">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>Human Handoff</h3>
+            <p>Smoothly pause automation and notify your team when a complex inquiry needs a human touch.</p>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="feature-item-card">
+            <div class="feature-icon-wrapper">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <h3>Analytics</h3>
+            <p>Gain insights into conversation volume, response times, and conversion milestones.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- =========================================================================
+         8. PRICING SECTION
+         ========================================================================= -->
+    <section class="pricing-section section-padding" id="pricing">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge-tag">
+            <span class="badge-dot"></span>
+            <span>TRANSPARENT PLANS</span>
+          </div>
+          <h2>Choose Your <span class="text-yellow">Automation</span></h2>
+          <p>
+            Select the plan tailored to your audience size and conversation volume. Easily upgrade as your inbox grows.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          
+          <!-- Starter -->
+          <div class="pricing-card">
+            <h3 class="pricing-plan-title">STARTER</h3>
+            <p class="pricing-plan-desc">For emerging creators and boutique accounts.</p>
+
+            <div class="pricing-rate-row">
+              <span class="rate-symbol">$</span>
+              <span class="rate-figure">79</span>
+              <span class="rate-unit">/ month</span>
+            </div>
+
+            <ul class="pricing-features">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Up to 5 automated keyword triggers</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Automated welcome greeting flow</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Basic FAQ automated response engine</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Standard email support</span>
+              </li>
+            </ul>
+
+            <a href="#getStarted" class="btn btn-secondary btn-select-tier" data-tier="STARTER">
+              <span>Choose Starter</span>
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+
+          <!-- Growth (Highlighted) -->
+          <div class="pricing-card featured">
+            <div class="featured-pill">RECOMMENDED</div>
+
+            <h3 class="pricing-plan-title">GROWTH</h3>
+            <p class="pricing-plan-desc">For scaling brands, e-commerce, and busy creators.</p>
+
+            <div class="pricing-rate-row">
+              <span class="rate-symbol">$</span>
+              <span class="rate-figure">199</span>
+              <span class="rate-unit">/ month</span>
+            </div>
+
+            <ul class="pricing-features">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Unlimited</strong> keyword-based reply triggers</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Comment-to-DM</strong> on Reels and posts</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Conversational lead capture &amp; validation</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Live human handoff &amp; notification alerts</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Priority chat &amp; onboarding assistance</span>
+              </li>
+            </ul>
+
+            <a href="#getStarted" class="btn btn-primary btn-select-tier" data-tier="GROWTH">
+              <span>Choose Growth</span>
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+
+          <!-- Business -->
+          <div class="pricing-card">
+            <h3 class="pricing-plan-title">BUSINESS</h3>
+            <p class="pricing-plan-desc">For high-volume accounts and multi-brand agencies.</p>
+
+            <div class="pricing-rate-row">
+              <span class="rate-symbol">$</span>
+              <span class="rate-figure">399</span>
+              <span class="rate-unit">/ month</span>
+            </div>
+
+            <ul class="pricing-features">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Multi-account routing and management</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Advanced conversational AI intent models</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Dedicated account manager &amp; custom setup</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>99.9% uptime SLA guarantee</span>
+              </li>
+            </ul>
+
+            <a href="#getStarted" class="btn btn-secondary btn-select-tier" data-tier="BUSINESS">
+              <span>Choose Business</span>
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. FAQ SECTION
+         ========================================================================= -->
+    <section class="faq-section section-padding" id="faq">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge-tag">
+            <span class="badge-dot"></span>
+            <span>QUESTIONS &amp; ANSWERS</span>
+          </div>
+          <h2>Frequently Asked <span class="text-yellow">Questions</span></h2>
+          <p>
+            Everything you need to know about setting up and running AUTOGRAM on your Instagram account.
+          </p>
+        </div>
+
+        <div class="faq-container">
+          
+          <!-- Q1 -->
+          <div class="faq-row">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>What is Instagram DM automation?</span>
+              <span class="faq-arrow">+</span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Instagram DM automation is a programmatic system that automatically listens for incoming direct messages, Story mentions, or Reel comments and responds instantaneously using predefined conversational flows. It keeps your inbox responsive 24/7 without manual intervention.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-row">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>How does AUTOGRAM work?</span>
+              <span class="faq-arrow">+</span>
+            </button>
+            <div class="faq-content">
+              <p>
+                AUTOGRAM connects directly to your Instagram Professional account via Meta's official Graph API. When a follower sends a message or comments a keyword, our system evaluates the trigger and instantly delivers the configured response or interactive options.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-row">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Can AUTOGRAM automatically reply to customers?</span>
+              <span class="faq-arrow">+</span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Yes! AUTOGRAM sends instant automated replies to inbound direct messages, responds to Story replies, and automatically delivers private messages whenever users comment specific keywords on your Reels or posts.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-row">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Can I capture leads through Instagram conversations?</span>
+              <span class="faq-arrow">+</span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Yes. AUTOGRAM conversationally asks prospects for their contact details (such as email, phone number, and interest), validates inputs in real time, and logs them for your sales workflow.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="faq-row">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Can a human take over a conversation?</span>
+              <span class="faq-arrow">+</span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Yes. When a prospect chooses "Talk to a Human" or asks a complex question, AUTOGRAM pauses automated responses on that thread and alerts your team so an agent can take over seamlessly.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="faq-row">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Can AUTOGRAM work with Instagram's official APIs?</span>
+              <span class="faq-arrow">+</span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Yes, 100%. AUTOGRAM operates strictly via Meta's official Messenger API for Instagram. We do not use unauthorized scrapers or unofficial tools, ensuring your account remains safe and compliant.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q7 -->
+          <div class="faq-row">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>What are the setup requirements?</span>
+              <span class="faq-arrow">+</span>
+            </button>
+            <div class="faq-content">
+              <p>
+                You only need an Instagram Professional (Business or Creator) account connected to a Facebook Page within Meta Business Suite. Setup takes less than 10 minutes with our guided onboarding.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         10. GET STARTED / LEAD CAPTURE FORM
+         ========================================================================= -->
+    <section class="get-started-section section-padding" id="getStarted">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge-tag">
+            <span class="badge-dot"></span>
+            <span>GET STARTED</span>
+          </div>
+          <h2>Ready to Deploy <span class="text-yellow">AUTOGRAM?</span></h2>
+          <p>
+            Tell us about your brand and automation goals. We'll set up your personalized configuration and walk you through deployment.
+          </p>
+        </div>
+
+        <div class="form-wrapper-box">
+          <form id="autogramForm" novalidate>
+            
+            <div class="form-two-cols">
+              <div class="form-field">
+                <label for="fullName" class="field-label">
+                  <span>Full Name</span>
+                  <span class="req">*</span>
+                </label>
+                <input type="text" id="fullName" class="field-input" placeholder="e.g. Alex Morgan" required>
+                <span class="err-msg" id="fullNameErr"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="businessName" class="field-label">
+                  <span>Business / Brand Name</span>
+                  <span class="req">*</span>
+                </label>
+                <input type="text" id="businessName" class="field-input" placeholder="e.g. Apex Apparel" required>
+                <span class="err-msg" id="businessNameErr"></span>
+              </div>
+            </div>
+
+            <div class="form-two-cols">
+              <div class="form-field">
+                <label for="workEmail" class="field-label">
+                  <span>Work Email</span>
+                  <span class="req">*</span>
+                </label>
+                <input type="email" id="workEmail" class="field-input" placeholder="alex@apexapparel.com" required>
+                <span class="err-msg" id="workEmailErr"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="instagramHandle" class="field-label">
+                  <span>Instagram Handle</span>
+                  <span class="req">*</span>
+                </label>
+                <input type="text" id="instagramHandle" class="field-input" placeholder="@apexapparel" required>
+                <span class="err-msg" id="instagramHandleErr"></span>
+              </div>
+            </div>
+
+            <div class="form-two-cols">
+              <div class="form-field">
+                <label for="businessType" class="field-label">
+                  <span>Business Category</span>
+                  <span class="req">*</span>
+                </label>
+                <select id="businessType" class="field-input" required>
+                  <option value="" disabled selected>Select category</option>
+                  <option value="E-commerce">E-commerce</option>
+                  <option value="Agency">Agency</option>
+                  <option value="Coach / Consultant">Coach / Consultant</option>
+                  <option value="Restaurant">Restaurant</option>
+                  <option value="Creator">Creator / Personal Brand</option>
+                  <option value="Other">Other Business</option>
+                </select>
+                <span class="err-msg" id="businessTypeErr"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="selectedTier" class="field-label">
+                  <span>Target Plan</span>
+                </label>
+                <select id="selectedTier" class="field-input">
+                  <option value="STARTER">Starter Plan ($79/mo)</option>
+                  <option value="GROWTH" selected>Growth Plan ($199/mo - Recommended)</option>
+                  <option value="BUSINESS">Business Plan ($399/mo)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field" style="margin-bottom: 20px;">
+              <label class="field-label">
+                <span>Select Required Automation Modules</span>
+                <span class="req">*</span>
+              </label>
+              <div class="modules-grid">
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="modules" value="Automated Welcome Flow" checked>
+                  <span>Automated Welcome Flow</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="modules" value="Keyword Trigger Replies" checked>
+                  <span>Keyword Triggers</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="modules" value="Comment-to-DM on Reels" checked>
+                  <span>Comment-to-DM for Reels</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="modules" value="Conversational Lead Capture" checked>
+                  <span>Conversational Lead Capture</span>
+                </label>
+              </div>
+              <span class="err-msg" id="modulesErr"></span>
+            </div>
+
+            <div class="submit-wrap">
+              <button type="submit" class="btn btn-primary btn-form-submit" id="submitBtn">
+                <span id="btnLabel">Request AUTOGRAM Consultation</span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
+
+            <div id="apiFeedbackBanner" class="api-feedback-banner" role="alert">
+              <h4 id="bannerTitle" style="font-size: 1.05rem; margin-bottom: 4px; color: #FFFFFF;"></h4>
+              <p id="bannerMsg" style="font-size: 0.9rem; line-height: 1.6; color: inherit;"></p>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         11. FINAL CTA (Large Yellow Area)
+         ========================================================================= -->
+    <section class="final-cta-section" id="finalCta">
+      <div class="container">
+        
+        <div class="final-yellow-card">
+          <h2>Your Inbox Can Do More.</h2>
+          <p>
+            Turn repetitive Instagram conversations into smoother customer experiences with AUTOGRAM.
+          </p>
+
+          <div class="final-cta-actions">
+            <a href="#demo" class="btn btn-black btn-lg">
+              <span>Try AUTOGRAM</span>
+              <span class="btn-arrow">→</span>
+            </a>
+            <a href="#getStarted" class="btn btn-black-outline btn-lg">
+              <span>Get Started</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       12. FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo" aria-label="AUTOGRAM Home">
+            <div class="nav-logo-mark">A</div>
+            <span>AUTOGRAM</span>
+          </a>
+          <p>
+            Smarter conversations. Less manual work.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h5>Product</h5>
+          <ul class="footer-links-list">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#demo">Live Demo</a></li>
+            <li><a href="#howItWorks">How It Works</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Platform</h5>
+          <ul class="footer-links-list">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Social</h5>
+          <ul class="footer-links-list">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="#getStarted">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 AUTOGRAM. All rights reserved.</p>
+        <p>Instagram DM Automation Platform</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- AUTOGRAM JavaScript Application -->
+  <script src="js/autogram.js"></script>
+</body>
+</html>

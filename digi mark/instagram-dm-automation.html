@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram DM Automation | Dolo Technology</title>
+  <meta name="description" content="Turn Instagram conversations into customers with intelligent DM automation, instant FAQ resolution, comment-to-DM triggers, and CRM lead capture built strictly on the official Meta Graph API.">
+  <meta name="keywords" content="Instagram DM Automation, Instagram chatbots, Meta Graph API, lead capture, comment to DM, Dolo Technology, customer messaging workflows">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Instagram DM Automation | Dolo Technology">
+  <meta property="og:description" content="Turn Instagram conversations into customers with intelligent 24/7 automation, lead capture, and CRM syncing.">
+  <meta property="og:url" content="https://dolotechnology.com/instagram-dm-automation">
+
+  <!-- Favicon Neon Cyan Logo Mark -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300CFFF'><path d='M12 2C6.48 2 2 6.48 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z'/></svg>">
+
+  <!-- Google Fonts: Inter, Poppins & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/instagram-dm-automation.css">
+  <link rel="stylesheet" href="css/ai-hero-bg.css">
+</head>
+<body>
+
+  <!-- Ambient Animated Lighting & Cyber Grid Background -->
+  <div class="bg-ambient-lights" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       1. NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Dolo Technology Home">
+        <div class="nav-logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <span>Dolo <span class="gradient-text">Technology</span></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Primary Navigation">
+        <a href="#hero" class="nav-link active">Overview</a>
+        <a href="#demo" class="nav-link">Live Demo</a>
+        <a href="#howItWorks" class="nav-link">How It Works</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#useCases" class="nav-link">Use Cases</a>
+        <a href="#integrations" class="nav-link">Integrations</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#leadCapture" class="btn btn-primary btn-sm">
+          <span>Request Consultation</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         2. HERO SECTION
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Copy & Actions -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="hero-badge-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </span>
+              <span>INSTAGRAM DM AUTOMATION</span>
+            </div>
+
+            <h1 class="hero-title">
+              Turn Instagram Conversations <span class="gradient-text">Into Customers.</span>
+            </h1>
+
+            <p class="hero-desc">
+              Automate Instagram DMs, answer customer questions, capture leads, and streamline your business conversations with intelligent automation.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="#demo" class="btn btn-primary btn-lg">
+                <span>Try Live Demo</span>
+                <span class="btn-arrow">↓</span>
+              </a>
+              <a href="#leadCapture" class="btn btn-secondary btn-lg">
+                <span>Get Started</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+
+            <div class="hero-trust-bar">
+              <div class="trust-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>Meta Graph API Compliant</span>
+              </div>
+              <div class="trust-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>Instant 24/7 Response Rate</span>
+              </div>
+              <div class="trust-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span>0% Account Risk Guarantee</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Animated Instagram Messaging Mockup -->
+          <div class="hero-visual-wrapper">
+            
+            <!-- Floating Notification Badge 1 -->
+            <div class="hero-floating-card float-top-left" aria-hidden="true">
+              <div class="floating-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <div class="floating-text">
+                <h5>Response Velocity</h5>
+                <p>&lt; 1.8 seconds automated reply</p>
+              </div>
+            </div>
+
+            <!-- Phone Frame Mockup -->
+            <div class="hero-phone-mockup">
+              <!-- Phone Status Bar -->
+              <div class="phone-top-bar">
+                <span>9:41</span>
+                <span>5G · 100%</span>
+              </div>
+
+              <!-- Instagram DM Header -->
+              <div class="phone-ig-header">
+                <div class="phone-ig-user">
+                  <div class="ig-avatar-ring">
+                    <div class="ig-avatar-inner">D</div>
+                  </div>
+                  <div class="ig-user-info">
+                    <h4>
+                      dolo.technology
+                      <span class="verified-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#00CFFF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                      </span>
+                    </h4>
+                    <span>Active now</span>
+                  </div>
+                </div>
+                <div class="phone-ig-actions">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                </div>
+              </div>
+
+              <!-- Message Stream Mockup -->
+              <div class="phone-chat-body">
+                <!-- Incoming Customer Query -->
+                <div class="chat-msg incoming">
+                  <div class="msg-bubble">
+                    Hey! Saw your Reel on e-commerce workflows. Can you automatically qualify leads from our Reel comments?
+                  </div>
+                  <span class="msg-time">9:41 AM</span>
+                </div>
+
+                <!-- Instant Automated Reply -->
+                <div class="chat-msg outgoing">
+                  <div class="msg-bubble">
+                    Absolutely! ⚡ Our comment-to-DM triggers instantly send personalized private messages whenever anyone comments on your Reels, collect verified email addresses, and sync directly to your CRM.
+                  </div>
+                  <span class="msg-time">9:41 AM · Automated</span>
+                </div>
+
+                <!-- Quick Replies Row -->
+                <div class="mockup-quick-replies">
+                  <span class="mockup-reply-pill">🚀 View Live Demo</span>
+                  <span class="mockup-reply-pill">💳 See Pricing</span>
+                  <span class="mockup-reply-pill">📅 Book Call</span>
+                </div>
+
+                <!-- Lead Capture Preview Card -->
+                <div class="chat-lead-preview">
+                  <div class="lead-preview-header">
+                    <span>⚡ Real-Time Lead Qualified</span>
+                    <span class="lead-badge-synced">✓ Synced to CRM</span>
+                  </div>
+                  <div class="lead-preview-row">
+                    <span>Prospect:</span>
+                    <span>Sarah Jenkins (@modernluxe)</span>
+                  </div>
+                  <div class="lead-preview-row">
+                    <span>Contact:</span>
+                    <span>sarah@modernluxe.co</span>
+                  </div>
+                  <div class="lead-preview-row">
+                    <span>Route:</span>
+                    <span>HubSpot Deals Pipeline</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Notification Badge 2 -->
+            <div class="hero-floating-card float-bottom-right" aria-hidden="true">
+              <div class="floating-icon" style="color: #4ade80; background: rgba(74, 222, 128, 0.15);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="floating-text">
+                <h5>Lead Routing</h5>
+                <p>+38 Inquiries Captured Today</p>
+              </div>
+            </div>
+
+            <div class="demo-disclaimer-pill">
+              Simulated Interactive Preview · Not connected to a real Instagram account
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. INTERACTIVE LIVE DEMO SECTION
+         ========================================================================= -->
+    <section class="demo-section section-padding" id="demo">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="pulse-dot"></span>
+            <span>EXPERIENCE IT LIVE</span>
+          </div>
+          <h2>Interactive Chat <span class="gradient-text">Simulator</span></h2>
+          <p>
+            Test our automated Instagram direct messaging logic in real time. Click quick options or type questions below to see how our workflows engage prospects and capture leads.
+          </p>
+        </div>
+
+        <div class="demo-simulator-wrapper">
+          <!-- Simulator Header -->
+          <div class="sim-header">
+            <div class="sim-brand">
+              <div class="sim-avatar">
+                <span>D</span>
+              </div>
+              <div class="sim-title">
+                <h4>
+                  Dolo Technology
+                  <span class="verified-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#00CFFF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  </span>
+                </h4>
+                <div class="sim-status">Simulated Agent · Ready</div>
+              </div>
+            </div>
+
+            <div class="sim-controls">
+              <button class="sim-btn-icon" id="simSoundToggle" aria-label="Toggle simulator sound">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                <span>Sound: ON</span>
+              </button>
+              <button class="sim-btn-icon" id="simResetBtn" aria-label="Reset chat simulation">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                <span>Reset Chat</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Simulator Chat Canvas -->
+          <div class="sim-chat-canvas" id="simChatCanvas" role="log" aria-live="polite">
+            <!-- Initial Welcome Message from Dolo Technology -->
+            <div class="sim-bubble-wrapper bot">
+              <div class="sim-bubble-avatar">D</div>
+              <div class="sim-bubble-content">
+                <div class="sim-bubble">
+                  Hi there! 👋 Welcome to Dolo Technology. How can we help you today?
+                </div>
+                <div class="sim-bubble-time">Just now · Automated Initial Greeting</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Options Bar -->
+          <div class="sim-quick-options-area" id="simQuickOptions">
+            <span class="quick-options-label">Select a simulated conversation trigger:</span>
+            <div class="quick-buttons-row">
+              <button type="button" class="sim-quick-btn" data-option="services">
+                <span>⚡ Explore Services</span>
+              </button>
+              <button type="button" class="sim-quick-btn" data-option="pricing">
+                <span>💳 Pricing</span>
+              </button>
+              <button type="button" class="sim-quick-btn" data-option="booking">
+                <span>📅 Book a Call</span>
+              </button>
+              <button type="button" class="sim-quick-btn" data-option="support">
+                <span>👨‍💼 Talk to Support</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Simulator Input Bar -->
+          <div class="sim-input-bar">
+            <input 
+              type="text" 
+              id="simTextInput" 
+              class="sim-text-input" 
+              placeholder="Type a message (e.g., pricing, services, book a call, hi)..."
+              aria-label="Type message in simulator"
+            >
+            <button type="button" class="sim-send-btn" id="simSendBtn" aria-label="Send simulated message">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </div>
+
+          <!-- Simulator Disclaimer Note -->
+          <div class="sim-footer-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <span>Simulated Interactive Demo — Runs entirely in-browser. Zero connection to live Instagram accounts or external APIs required.</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. HOW IT WORKS SECTION (4-Step Connected Workflow)
+         ========================================================================= -->
+    <section class="workflow-section section-padding" id="howItWorks">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="pulse-dot"></span>
+            <span>SYSTEM ARCHITECTURE</span>
+          </div>
+          <h2>How It Works <span class="gradient-text">Under the Hood</span></h2>
+          <p>
+            Our intelligent automation orchestrates every customer interaction smoothly from trigger detection to CRM handoff through Meta's official messaging infrastructure.
+          </p>
+        </div>
+
+        <div class="workflow-grid">
+          <!-- Line connector overlay -->
+          <div class="workflow-connector-line" aria-hidden="true"></div>
+
+          <!-- Step 1 -->
+          <div class="workflow-step-card">
+            <div class="step-node-header">
+              <div class="step-number-circle">01</div>
+              <div class="step-node-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+            </div>
+            <h3>Interaction Triggered</h3>
+            <p>
+              Customer sends a direct message, mentions your handle in an Instagram Story, or comments on a Reel with a specific designated keyword.
+            </p>
+            <div class="step-meta-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              <span>Trigger: DM / Story / Reel Comment</span>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="workflow-step-card">
+            <div class="step-node-header">
+              <div class="step-number-circle">02</div>
+              <div class="step-node-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+            </div>
+            <h3>Trigger Identified</h3>
+            <p>
+              Our webhook engine immediately receives the encrypted event payload, classifies intent, validates the user context, and routes to the matching logic flow.
+            </p>
+            <div class="step-meta-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <span>Latency: &lt; 250ms Processing</span>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="workflow-step-card">
+            <div class="step-node-header">
+              <div class="step-number-circle">03</div>
+              <div class="step-node-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+            </div>
+            <h3>Approved Response Sent</h3>
+            <p>
+              An automated, personalized reply is delivered within Meta's 24-hour messaging window, featuring interactive quick-reply buttons and rich media.
+            </p>
+            <div class="step-meta-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Meta Graph API Approved</span>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="workflow-step-card">
+            <div class="step-node-header">
+              <div class="step-number-circle">04</div>
+              <div class="step-node-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+            </div>
+            <h3>Lead Captured & Routed</h3>
+            <p>
+              Customer details (verified email, budget, phone) are validated conversationally and pushed in real-time to your CRM, Slack, or designated human agent.
+            </p>
+            <div class="step-meta-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+              <span>HubSpot / Salesforce / Webhook</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. FEATURES SECTION (8 Interactive Cards)
+         ========================================================================= -->
+    <section class="features-section section-padding" id="features">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="pulse-dot"></span>
+            <span>CAPABILITIES</span>
+          </div>
+          <h2>Engineered for High-Conversion <span class="gradient-text">Conversations</span></h2>
+          <p>
+            Explore the eight core automated modules architected to turn passive Instagram followers into qualified, paying buyers.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          
+          <!-- Card 1 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <h3>Automated Welcome Messages</h3>
+            <p>
+              Greet first-time message senders instantly with personalized onboarding menus and self-service routing options.
+            </p>
+            <div class="feature-mini-preview">
+              <div class="mini-preview-header">
+                <span>Trigger</span>
+                <span>First DM Inbound</span>
+              </div>
+              <div class="mini-preview-text">"Welcome to Dolo! Tap below to start →"</div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
+            </div>
+            <h3>Keyword-Based Replies</h3>
+            <p>
+              Trigger specific conversational flows when users message keywords like "PRICING", "DISCOUNT", or "WORKSHOP".
+            </p>
+            <div class="feature-mini-preview">
+              <div class="mini-preview-header">
+                <span>Keyword Match</span>
+                <span>'DEMO' / 'PRICING'</span>
+              </div>
+              <div class="mini-preview-text">Matched → Dispatches Pricing Funnel</div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </div>
+            <h3>Comment-to-DM Automation</h3>
+            <p>
+              Auto-send a private DM with lead magnets or purchase links whenever users comment on your Reels or posts.
+            </p>
+            <div class="feature-mini-preview">
+              <div class="mini-preview-header">
+                <span>Reel Comment</span>
+                <span>"Send guide!"</span>
+              </div>
+              <div class="mini-preview-text">Private DM Sent: "Here is your link: [URL]"</div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <h3>FAQ Automation</h3>
+            <p>
+              Resolve routine inquiries about pricing, hours, delivery estimates, and policies 24/7 with zero human latency.
+            </p>
+            <div class="feature-mini-preview">
+              <div class="mini-preview-header">
+                <span>Inquiry</span>
+                <span>"Do you ship overseas?"</span>
+              </div>
+              <div class="mini-preview-text">"Yes! Global express shipping takes 3-5 days."</div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+            </div>
+            <h3>Lead Capture</h3>
+            <p>
+              Collect emails, phone numbers, and project specifications conversationally with integrated field validation.
+            </p>
+            <div class="feature-mini-preview">
+              <div class="mini-preview-header">
+                <span>Validation</span>
+                <span>Regex Email Check</span>
+              </div>
+              <div class="mini-preview-text">✓ Captured: alex@brand.com</div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            </div>
+            <h3>CRM Integration</h3>
+            <p>
+              Stream captured customer records directly into HubSpot, Salesforce, Zoho, Klaviyo, Google Sheets, or Zapier webhooks.
+            </p>
+            <div class="feature-mini-preview">
+              <div class="mini-preview-header">
+                <span>Webhook Push</span>
+                <span>HubSpot CRM</span>
+              </div>
+              <div class="mini-preview-text">Status: 200 OK · Contact Created</div>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>Human Handoff</h3>
+            <p>
+              Seamlessly transfer complex conversations to live support specialists while temporarily pausing automated responses.
+            </p>
+            <div class="feature-mini-preview">
+              <div class="mini-preview-header">
+                <span>Live Escalation</span>
+                <span>Auto-Pause: Active</span>
+              </div>
+              <div class="mini-preview-text">Assigned to: Senior Agent (Slack alert sent)</div>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <h3>Conversation Analytics</h3>
+            <p>
+              Track engagement velocities, conversion rates, peak DM traffic hours, and drop-off points to optimize your funnels.
+            </p>
+            <div class="feature-mini-preview">
+              <div class="mini-preview-header">
+                <span>Funnel Metrics</span>
+                <span>Weekly Report</span>
+              </div>
+              <div class="mini-preview-text">Conversion Rate: 34.2% · Avg Time: 45s</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. USE CASES SECTION (5 Industry Profiles)
+         ========================================================================= -->
+    <section class="usecases-section section-padding" id="useCases">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="pulse-dot"></span>
+            <span>PROVEN APPLICATIONS</span>
+          </div>
+          <h2>Tailored Solutions for Every <span class="gradient-text">Business Model</span></h2>
+          <p>
+            Discover how diverse organizations deploy our Instagram DM automation to solve high-volume communication bottlenecks.
+          </p>
+        </div>
+
+        <div class="usecases-grid">
+          
+          <!-- Use Case 1 -->
+          <div class="usecase-card">
+            <div class="usecase-header">
+              <div class="usecase-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+              </div>
+              <h3>E-Commerce Brands</h3>
+            </div>
+            <p>
+              Automate sizing recommendations, send personalized promo codes from Reel comments, track shipments, and recover abandoned shopping conversations.
+            </p>
+            <div class="usecase-sample-flow">
+              <div class="sample-flow-title">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"></circle></svg>
+                <span>Sample Workflow</span>
+              </div>
+              <div class="sample-flow-chat">
+                <b>Customer:</b> "What size should I get for 5'10?"<br>
+                <b>Bot:</b> "Based on your height, Size M is ideal! Here is the direct cart link with 10% off."
+              </div>
+            </div>
+          </div>
+
+          <!-- Use Case 2 -->
+          <div class="usecase-card">
+            <div class="usecase-header">
+              <div class="usecase-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <h3>Digital Agencies</h3>
+            </div>
+            <p>
+              Qualify inbound client leads 24/7 by collecting their monthly ad spend, business category, and timeline before booking an executive discovery call.
+            </p>
+            <div class="usecase-sample-flow">
+              <div class="sample-flow-title">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"></circle></svg>
+                <span>Sample Workflow</span>
+              </div>
+              <div class="sample-flow-chat">
+                <b>Lead:</b> "Looking for SEO services"<br>
+                <b>Bot:</b> "What is your target monthly budget? [Under $5k] [$5k-$15k] [$15k+]"
+              </div>
+            </div>
+          </div>
+
+          <!-- Use Case 3 -->
+          <div class="usecase-card">
+            <div class="usecase-header">
+              <div class="usecase-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </div>
+              <h3>Coaches & Consultants</h3>
+            </div>
+            <p>
+              Deliver free training materials, assess program fit with conversational surveys, and automatically sync booked consultations into your Calendly schedule.
+            </p>
+            <div class="usecase-sample-flow">
+              <div class="sample-flow-title">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"></circle></svg>
+                <span>Sample Workflow</span>
+              </div>
+              <div class="sample-flow-chat">
+                <b>User:</b> "Comment: BLUEPRINT"<br>
+                <b>Bot:</b> "Sent! Check your DMs for the free 14-day scaling guide and booking link."
+              </div>
+            </div>
+          </div>
+
+          <!-- Use Case 4 -->
+          <div class="usecase-card">
+            <div class="usecase-header">
+              <div class="usecase-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+              </div>
+              <h3>Restaurants & Local Venues</h3>
+            </div>
+            <p>
+              Instantly share digital menus, answer parking and dietary questions, capture private party reservations, and promote upcoming weekend specials.
+            </p>
+            <div class="usecase-sample-flow">
+              <div class="sample-flow-title">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"></circle></svg>
+                <span>Sample Workflow</span>
+              </div>
+              <div class="sample-flow-chat">
+                <b>Guest:</b> "Do you take reservations for 6 tonight?"<br>
+                <b>Bot:</b> "Yes! We have an 8:00 PM table available. Would you like to reserve?"
+              </div>
+            </div>
+          </div>
+
+          <!-- Use Case 5 -->
+          <div class="usecase-card">
+            <div class="usecase-header">
+              <div class="usecase-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <h3>Creators & Personal Brands</h3>
+            </div>
+            <p>
+              Handle hundreds of daily DMs effortlessly. Deliver sponsored affiliate links, share digital product downloads, and monetize your community without burnout.
+            </p>
+            <div class="usecase-sample-flow">
+              <div class="sample-flow-title">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"></circle></svg>
+                <span>Sample Workflow</span>
+              </div>
+              <div class="sample-flow-chat">
+                <b>Follower:</b> "Where did you get that camera setup?"<br>
+                <b>Bot:</b> "Here is the exact gear list and exclusive discount code for our community!"
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. INTEGRATIONS SECTION
+         ========================================================================= -->
+    <section class="integrations-section section-padding" id="integrations">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="pulse-dot"></span>
+            <span>ECOSYSTEM COMPATIBILITY</span>
+          </div>
+          <h2>Connected to Your Existing <span class="gradient-text">Tech Stack</span></h2>
+          <p>
+            We integrate with standard CRM, booking, and helpdesk tools. Below is our clear compatibility matrix distinguishing between out-of-the-box readiness and API setup requirements.
+          </p>
+        </div>
+
+        <div class="integrations-grid">
+          
+          <!-- Integration 1 -->
+          <div class="integration-card">
+            <div class="integration-card-top">
+              <div class="integration-logo-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </div>
+              <span class="status-badge ready">Ready Out-of-the-Box</span>
+            </div>
+            <h4>Instagram Direct API</h4>
+            <p>Official Meta Graph API messaging webhooks with full compliance and 24-hr messaging window.</p>
+          </div>
+
+          <!-- Integration 2 -->
+          <div class="integration-card">
+            <div class="integration-card-top">
+              <div class="integration-logo-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+              </div>
+              <span class="status-badge setup">Requires Webhook Setup</span>
+            </div>
+            <h4>HubSpot CRM</h4>
+            <p>Real-time lead creation, property mapping, pipeline deal creation, and conversation logging.</p>
+          </div>
+
+          <!-- Integration 3 -->
+          <div class="integration-card">
+            <div class="integration-card-top">
+              <div class="integration-logo-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              </div>
+              <span class="status-badge setup">Requires API Key</span>
+            </div>
+            <h4>Calendly &amp; Cal.com</h4>
+            <p>Automated meeting slot availability and booking link generation within Instagram DM threads.</p>
+          </div>
+
+          <!-- Integration 4 -->
+          <div class="integration-card">
+            <div class="integration-card-top">
+              <div class="integration-logo-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <span class="status-badge ready">Ready Out-of-the-Box</span>
+            </div>
+            <h4>Custom Webhooks &amp; REST</h4>
+            <p>Push JSON payloads to any custom internal database, microservice, or serverless endpoint.</p>
+          </div>
+
+          <!-- Integration 5 -->
+          <div class="integration-card">
+            <div class="integration-card-top">
+              <div class="integration-logo-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+              </div>
+              <span class="status-badge setup">Requires OAuth Config</span>
+            </div>
+            <h4>Salesforce</h4>
+            <p>Bi-directional lead and case creation with enterprise field validation and assignment rules.</p>
+          </div>
+
+          <!-- Integration 6 -->
+          <div class="integration-card">
+            <div class="integration-card-top">
+              <div class="integration-logo-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <span class="status-badge setup">Requires Zapier App</span>
+            </div>
+            <h4>Zapier &amp; Make.com</h4>
+            <p>Trigger 5,000+ app workflows across email marketing, Google Sheets, Airtable, and Notion.</p>
+          </div>
+
+          <!-- Integration 7 -->
+          <div class="integration-card">
+            <div class="integration-card-top">
+              <div class="integration-logo-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </div>
+              <span class="status-badge setup">Requires Setup</span>
+            </div>
+            <h4>Klaviyo &amp; Mailchimp</h4>
+            <p>Sync subscriber lists, trigger email welcome sequences, and segment users by DM behavior.</p>
+          </div>
+
+          <!-- Integration 8 -->
+          <div class="integration-card">
+            <div class="integration-card-top">
+              <div class="integration-logo-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <span class="status-badge setup">Requires Webhook Bot</span>
+            </div>
+            <h4>Slack Team Alerts</h4>
+            <p>Instant notifications to internal sales channels whenever a high-intent conversation starts.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. PRICING SECTION
+         ========================================================================= -->
+    <section class="pricing-section section-padding" id="pricing">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="pulse-dot"></span>
+            <span>TRANSPARENT PLANS</span>
+          </div>
+          <h2>Flexible Plans Built to <span class="gradient-text">Scale</span></h2>
+          <p>
+            Choose the right automation tier for your current inbound conversation volume. All plans are fully customizable to meet your specific technical architecture.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          
+          <!-- Tier 1: Starter -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-tier-name">Starter</h3>
+              <p class="pricing-desc">For emerging creators, boutiques, and single-location businesses.</p>
+            </div>
+
+            <div class="pricing-price-wrap">
+              <span class="price-currency">$</span>
+              <span class="price-number">149</span>
+              <span class="price-period">/ month (est.)</span>
+            </div>
+
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Up to 10 automated keyword triggers</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Automated welcome greeting flow</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Basic FAQ automated response engine</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Email notifications for new leads</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Meta Graph API compliance guarantee</span>
+              </li>
+            </ul>
+
+            <a href="#leadCapture" class="btn btn-secondary btn-quote-tier" data-tier="Starter">
+              <span>Get a Quote</span>
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+
+          <!-- Tier 2: Growth (Popular) -->
+          <div class="pricing-card popular">
+            <div class="popular-badge">Most Popular</div>
+
+            <div class="pricing-header">
+              <h3 class="pricing-tier-name">Growth</h3>
+              <p class="pricing-desc">For scaling brands, e-commerce, and high-growth agencies.</p>
+            </div>
+
+            <div class="pricing-price-wrap">
+              <span class="price-currency">$</span>
+              <span class="price-number">349</span>
+              <span class="price-period">/ month (est.)</span>
+            </div>
+
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Unlimited</strong> keyword-based reply triggers</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Comment-to-DM</strong> automation on Reels &amp; posts</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Full CRM sync (HubSpot, Zapier, Webhooks)</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Live human handoff &amp; agent pause routing</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Calendly meeting booking sync</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Priority analytics dashboard</span>
+              </li>
+            </ul>
+
+            <a href="#leadCapture" class="btn btn-primary btn-quote-tier" data-tier="Growth">
+              <span>Get a Quote</span>
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+
+          <!-- Tier 3: Business / Enterprise -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-tier-name">Business</h3>
+              <p class="pricing-desc">For multi-account enterprises, franchises, and custom workflows.</p>
+            </div>
+
+            <div class="pricing-price-wrap">
+              <span class="price-currency">Custom</span>
+              <span class="price-number" style="font-size: 2.2rem;">Quote</span>
+              <span class="price-period">/ tailored SLA</span>
+            </div>
+
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Custom AI natural language intent recognition</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Multi-account &amp; multi-region routing</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Dedicated webhook architecture &amp; ERP integrations</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Enterprise SLA with dedicated engineer</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Meta Business verification guidance</span>
+              </li>
+            </ul>
+
+            <a href="#leadCapture" class="btn btn-secondary btn-quote-tier" data-tier="Business">
+              <span>Get a Quote</span>
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Feature Comparison Matrix -->
+        <div class="pricing-comparison-wrapper">
+          <h3 style="font-size: 1.25rem; margin-bottom: 20px;">Feature Comparison Matrix</h3>
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Automation Feature</th>
+                <th>Starter</th>
+                <th>Growth</th>
+                <th>Business</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Keyword Trigger Capacity</td>
+                <td>Up to 10</td>
+                <td>Unlimited</td>
+                <td>Unlimited + AI Matching</td>
+              </tr>
+              <tr>
+                <td>Comment-to-DM for Reels</td>
+                <td><span class="cross-icon">—</span></td>
+                <td><span class="check-icon">✓ Included</span></td>
+                <td><span class="check-icon">✓ Included</span></td>
+              </tr>
+              <tr>
+                <td>Direct CRM Integration</td>
+                <td>Email Forwarding</td>
+                <td>HubSpot, Zapier, Webhook</td>
+                <td>Custom API, ERP, Salesforce</td>
+              </tr>
+              <tr>
+                <td>Live Human Handoff</td>
+                <td>Manual Notice</td>
+                <td><span class="check-icon">✓ Auto-Pause &amp; Alert</span></td>
+                <td><span class="check-icon">✓ Multi-Agent Routing</span></td>
+              </tr>
+              <tr>
+                <td>Meta Graph API Approval</td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Implementation Support</td>
+                <td>Email Support</td>
+                <td>Priority Technical Support</td>
+                <td>Dedicated Account Architect</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 14px;">
+            * Pricing shown represents estimated starting costs. Final quotes depend on inbound conversation volume, custom integration depth, and account requirements.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. FAQ SECTION (Accordion)
+         ========================================================================= -->
+    <section class="faq-section section-padding" id="faq">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="pulse-dot"></span>
+            <span>KNOWLEDGE BASE</span>
+          </div>
+          <h2>Frequently Asked <span class="gradient-text">Questions</span></h2>
+          <p>
+            Clear, accurate answers regarding platform rules, Meta API constraints, and deployment requirements.
+          </p>
+        </div>
+
+        <div class="faq-accordion">
+          
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>What is Instagram DM automation?</span>
+              <div class="faq-icon-wrap">+</div>
+            </button>
+            <div class="faq-answer-panel">
+              <p class="faq-answer-text">
+                Instagram DM automation is a programmatic messaging system that automatically listens for incoming direct messages, Story mentions, or Reel comments and responds instantaneously using predefined conversational funnels. It enables businesses to qualify leads, answer frequently asked questions, and route inquiries 24/7 without requiring manual human monitoring for every inbound notification.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>How does it work?</span>
+              <div class="faq-icon-wrap">+</div>
+            </button>
+            <div class="faq-answer-panel">
+              <p class="faq-answer-text">
+                When a user interacts with your profile (such as sending a DM or commenting a keyword on your Reel), Meta's servers emit a real-time webhook payload. Our secure automation infrastructure processes this event, checks configured trigger conditions, and calls the official Meta Graph API to dispatch the appropriate response bubble, interactive button, or media asset back to the user within milliseconds.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Do I need a professional Instagram account?</span>
+              <div class="faq-icon-wrap">+</div>
+            </button>
+            <div class="faq-answer-panel">
+              <p class="faq-answer-text">
+                Yes. Under Meta's platform policies, automated direct messaging is exclusively available for <strong>Instagram Business</strong> or <strong>Instagram Creator</strong> accounts. Additionally, your Instagram account must be connected to a Facebook Page within Meta Business Suite, and messaging permissions must be granted to the automation application. Personal accounts cannot use API-level messaging automation.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can I automatically reply to comments?</span>
+              <div class="faq-icon-wrap">+</div>
+            </button>
+            <div class="faq-answer-panel">
+              <p class="faq-answer-text">
+                Yes, through Meta's officially supported <em>Comment-to-DM</em> trigger. When a follower comments on your Feed Post or Reel containing your designated keyword (e.g., "PRICE", "GUIDE", "WORKSHOP"), our system can automatically send a private direct message containing your link or lead magnet. Please note that Meta messaging policies enforce a 24-hour standard messaging window following user-initiated interaction.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can I collect leads through DMs?</span>
+              <div class="faq-icon-wrap">+</div>
+            </button>
+            <div class="faq-answer-panel">
+              <p class="faq-answer-text">
+                Absolutely. Our workflows prompt users step-by-step to supply their email address, business name, phone number, and budget range. The inputs are validated in real time (e.g. checking for correct email formatting) and immediately transmitted via webhooks to your CRM (such as HubSpot or Salesforce), email marketing platform, or Google Sheets.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Can a human take over a conversation?</span>
+              <div class="faq-icon-wrap">+</div>
+            </button>
+            <div class="faq-answer-panel">
+              <p class="faq-answer-text">
+                Yes, our system incorporates an automatic <strong>Human Handoff Protocol</strong>. When a prospect selects "Talk to Support" or when a query is flagged as complex, the bot pauses automated replies for that user thread and dispatches a notification to your team via Slack or email. When your team replies manually via Meta Business Inbox or the Instagram app, the automation remains paused to ensure a natural human interaction.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Does it work with the official Instagram API?</span>
+              <div class="faq-icon-wrap">+</div>
+            </button>
+            <div class="faq-answer-panel">
+              <p class="faq-answer-text">
+                <strong>Yes, 100%.</strong> Dolo Technology develops automations exclusively on the official Meta Messenger API for Instagram (Graph API). We do not employ unofficial scraping tools, browser emulators, or password-based automation bots that violate Instagram's Terms of Service. This ensures zero risk of account bans or shadowbanning.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>What are the pricing and setup requirements?</span>
+              <div class="faq-icon-wrap">+</div>
+            </button>
+            <div class="faq-answer-panel">
+              <p class="faq-answer-text">
+                Setup requires an Instagram Business or Creator account connected to a Facebook Page, access to Meta Business Manager, and your target CRM/webhook destination. Pricing starts at an estimated $149/month for starter setups and scales based on your monthly conversation volume and custom integration requirements. Our team handles complete end-to-end setup, webhook configuration, and testing.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         10. LEAD CAPTURE FORM SECTION
+         ========================================================================= -->
+    <section class="lead-form-section section-padding" id="leadCapture">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="pulse-dot"></span>
+            <span>SCHEDULE YOUR CONSULTATION</span>
+          </div>
+          <h2>Request an Instagram Automation <span class="gradient-text">Consultation</span></h2>
+          <p>
+            Fill out the form below. An automation architect from Dolo Technology will review your current Instagram presence, map your conversational bottlenecks, and prepare a custom deployment proposal.
+          </p>
+        </div>
+
+        <div class="lead-form-wrapper">
+          <form id="consultationForm" novalidate>
+            
+            <div class="form-grid-row">
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="fullName" class="form-label">
+                  <span>Full Name</span>
+                  <span class="req">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  class="form-control" 
+                  placeholder="e.g. Alex Morgan"
+                  required
+                >
+                <span class="field-error-msg" id="fullNameError"></span>
+              </div>
+
+              <!-- Business Name -->
+              <div class="form-group">
+                <label for="businessName" class="form-label">
+                  <span>Business Name</span>
+                  <span class="req">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="businessName" 
+                  class="form-control" 
+                  placeholder="e.g. Vanguard Retail Co."
+                  required
+                >
+                <span class="field-error-msg" id="businessNameError"></span>
+              </div>
+            </div>
+
+            <div class="form-grid-row">
+              <!-- Work Email -->
+              <div class="form-group">
+                <label for="email" class="form-label">
+                  <span>Work Email Address</span>
+                  <span class="req">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  class="form-control" 
+                  placeholder="alex@vanguard.com"
+                  required
+                >
+                <span class="field-error-msg" id="emailError"></span>
+              </div>
+
+              <!-- Instagram Username -->
+              <div class="form-group">
+                <label for="instagramUsername" class="form-label">
+                  <span>Instagram Username</span>
+                  <span class="req">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="instagramUsername" 
+                  class="form-control" 
+                  placeholder="@vanguardretail"
+                  required
+                >
+                <span class="field-error-msg" id="instagramUsernameError"></span>
+              </div>
+            </div>
+
+            <div class="form-grid-row">
+              <!-- Business Type -->
+              <div class="form-group">
+                <label for="businessType" class="form-label">
+                  <span>Business Type</span>
+                  <span class="req">*</span>
+                </label>
+                <select id="businessType" class="form-control" required>
+                  <option value="" disabled selected>Select your industry</option>
+                  <option value="E-Commerce & Retail">E-Commerce &amp; Retail</option>
+                  <option value="Digital Marketing Agency">Digital Marketing Agency</option>
+                  <option value="Coaching & Consulting">Coaching &amp; Consulting</option>
+                  <option value="Restaurant & Hospitality">Restaurant &amp; Hospitality</option>
+                  <option value="Creator & Personal Brand">Creator &amp; Personal Brand</option>
+                  <option value="SaaS & Technology">SaaS &amp; Technology</option>
+                  <option value="Other Enterprise">Other Enterprise</option>
+                </select>
+                <span class="field-error-msg" id="businessTypeError"></span>
+              </div>
+
+              <!-- Preferred Pricing Tier -->
+              <div class="form-group">
+                <label for="preferredTier" class="form-label">
+                  <span>Preferred Plan Target</span>
+                </label>
+                <select id="preferredTier" class="form-control">
+                  <option value="Starter">Starter Plan ($149/mo est.)</option>
+                  <option value="Growth" selected>Growth Plan ($349/mo est. - Recommended)</option>
+                  <option value="Business">Business / Enterprise (Custom Quote)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Automation Requirements Multi-select & Notes -->
+            <div class="form-group" style="margin-bottom: 24px;">
+              <label class="form-label">
+                <span>Select Desired Automation Capabilities</span>
+                <span class="req">*</span>
+              </label>
+              
+              <div class="req-checkboxes">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="reqModules" value="Welcome Onboarding Flow" checked>
+                  <span>Automated Welcome Flow</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="reqModules" value="Keyword Trigger Replies" checked>
+                  <span>Keyword-Based Replies</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="reqModules" value="Comment-to-DM for Reels" checked>
+                  <span>Comment-to-DM for Reels</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="reqModules" value="24/7 FAQ Engine">
+                  <span>24/7 FAQ Automated Resolution</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="reqModules" value="Conversational Lead Capture" checked>
+                  <span>Conversational Lead Capture</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="reqModules" value="CRM & Webhook Sync">
+                  <span>HubSpot / CRM Webhook Sync</span>
+                </label>
+              </div>
+              <span class="field-error-msg" id="reqBoxError"></span>
+            </div>
+
+            <!-- Additional Notes / Goals -->
+            <div class="form-group" style="margin-bottom: 24px;">
+              <label for="requirementsNotes" class="form-label">
+                <span>Specific Goals or Bottlenecks (Optional)</span>
+              </label>
+              <textarea 
+                id="requirementsNotes" 
+                class="form-control" 
+                rows="3" 
+                placeholder="Tell us about your current daily DM volume, CRM tools, or specific campaign goals..."
+              ></textarea>
+            </div>
+
+            <div class="submit-btn-wrap">
+              <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                <span id="btnText">Request a Consultation</span>
+                <span id="btnSpinner" style="display: none; width: 18px; height: 18px; border: 2px solid rgba(0,0,0,0.3); border-top-color: #000; border-radius: 50%; animation: spin 0.8s linear infinite;"></span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
+
+            <!-- Notification Alerts for Genuine API responses -->
+            <div id="formNotification" class="form-notification" role="alert">
+              <div class="notification-inner">
+                <div id="notificationIcon" style="font-size: 1.4rem;">✓</div>
+                <div>
+                  <h4 id="notificationTitle">Request Received</h4>
+                  <p id="notificationMessage">Your consultation request has been processed.</p>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         11. FINAL CTA SECTION
+         ========================================================================= -->
+    <section class="final-cta-section" id="cta">
+      <div class="container">
+        
+        <div class="cta-box">
+          <h2>Ready to Automate Your <span class="gradient-text">Instagram Conversations?</span></h2>
+          <p>
+            Let Dolo Technology help you build a smarter customer messaging workflow.
+          </p>
+
+          <div class="cta-buttons-row">
+            <a href="#leadCapture" class="btn btn-primary btn-lg">
+              <span>Get Started</span>
+              <span class="btn-arrow">→</span>
+            </a>
+            <a href="mailto:hello@dolotechnology.com" class="btn btn-secondary btn-lg">
+              <span>Talk to Our Team</span>
+              <span class="btn-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       12. FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo" aria-label="Dolo Technology Home">
+            <div class="nav-logo-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <span>Dolo <span class="gradient-text">Technology</span></span>
+          </a>
+          <p>
+            Engineering intelligent automation, high-performance messaging workflows, and enterprise API integrations for modern brands worldwide.
+          </p>
+          <div class="footer-compliance-notice">
+            <strong>Compliance Note:</strong> All automation workflows are architected strictly within the official Meta Platform Terms and Instagram Messaging API policies. No unauthorized scraping or bot-spoofing techniques are used.
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Service Page</h5>
+          <ul class="footer-links">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#demo">Live Simulator</a></li>
+            <li><a href="#howItWorks">How It Works</a></li>
+            <li><a href="#features">Feature Suite</a></li>
+            <li><a href="#useCases">Industry Use Cases</a></li>
+            <li><a href="#integrations">Supported Integrations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Solutions</h5>
+          <ul class="footer-links">
+            <li><a href="#pricing">Pricing &amp; Plans</a></li>
+            <li><a href="#faq">FAQ Knowledge Base</a></li>
+            <li><a href="#leadCapture">Request Consultation</a></li>
+            <li><a href="mailto:hello@dolotechnology.com">Technical Inquiries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Connect With Us</h5>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">
+            Have questions about custom webhook routing or high-volume messaging limits? Contact our solutions architects.
+          </p>
+          <p style="font-size: 0.9rem; color: var(--text-white);">
+            <strong>Email:</strong> <a href="mailto:hello@dolotechnology.com" style="color: var(--accent-cyan);">hello@dolotechnology.com</a>
+          </p>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 8px;">
+            Dolo Technology · Autonomous Software &amp; Messaging Systems
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dolo Technology. All Rights Reserved.</p>
+        <p>Instagram DM Automation Service · Powered by Meta Graph API Architecture</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <style>
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+
+  <!-- AI Assistant Hero Background Component -->
+  <script src="js/ai-hero-bg.js"></script>
+  <!-- JavaScript Application -->
+  <script src="js/instagram-dm-automation.js"></script>
+</body>
+</html>

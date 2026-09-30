@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Assistant Hero Background Component | Interactive Demo</title>
+  <meta name="description" content="Reusable futuristic AI Assistant hero background component with glowing audio waveforms, ambient radial glows, masked grid, and floating glass bubbles.">
+
+  <!-- Google Fonts: Inter & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Component Stylesheet -->
+  <link rel="stylesheet" href="css/ai-hero-bg.css">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #05060a;
+      color: #f1f5f9;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Demo Hero Container */
+    .demo-hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 24px 60px 24px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero-inner-content {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+      margin: 0 auto;
+      pointer-events: auto;
+    }
+
+    .demo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(124, 58, 237, 0.12);
+      border: 1px solid rgba(124, 58, 237, 0.35);
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #a78bfa;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      backdrop-filter: blur(10px);
+    }
+
+    .demo-badge .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22d3ee;
+      box-shadow: 0 0 10px #22d3ee;
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0% { transform: scale(0.9); opacity: 0.6; }
+      50% { transform: scale(1.4); opacity: 1; }
+      100% { transform: scale(0.9); opacity: 0.6; }
+    }
+
+    .demo-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #f8fafc 20%, #22d3ee 65%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .demo-subtitle {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: #94a3b8;
+      max-width: 680px;
+      margin: 0 auto 36px auto;
+      line-height: 1.65;
+    }
+
+    .demo-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 50%, #7c3aed 100%);
+      color: #030712;
+      font-weight: 700;
+      box-shadow: 0 4px 25px rgba(34, 211, 238, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 35px rgba(34, 211, 238, 0.5);
+    }
+
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #f8fafc;
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #22d3ee;
+      transform: translateY(-2px);
+    }
+
+    /* Live Controls Panel Below Hero */
+    .controls-panel-section {
+      max-width: 1080px;
+      margin: 0 auto 80px auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .controls-card {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 32px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(124, 58, 237, 0.1);
+    }
+
+    .controls-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .controls-header h3 {
+      font-size: 1.25rem;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .fps-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: #4ade80;
+      background: rgba(74, 222, 128, 0.1);
+      border: 1px solid rgba(74, 222, 128, 0.3);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .controls-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .control-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .control-item label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #94a3b8;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .control-item label span.val {
+      color: #22d3ee;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .control-item input[type="range"] {
+      accent-color: #22d3ee;
+      height: 6px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+    }
+
+    .control-toggles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .toggle-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 8px 14px;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.2s;
+    }
+
+    .toggle-pill:hover {
+      border-color: #22d3ee;
+    }
+
+    .toggle-pill input {
+      accent-color: #22d3ee;
+    }
+
+    /* Integration Code Snippet */
+    .code-preview {
+      background: #030408;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 24px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      color: #cbd5e1;
+      overflow-x: auto;
+    }
+
+    .code-preview .keyword { color: #c084fc; }
+    .code-preview .string { color: #67e8f9; }
+    .code-preview .comment { color: #64748b; }
+  </style>
+</head>
+<body>
+
+  <!-- HERO SECTION WITH AI ASSISTANT BACKGROUND COMPONENT -->
+  <section class="demo-hero" id="demoHero">
+    
+    <!-- Hero Foreground Content (Clean & High Contrast) -->
+    <div class="hero-inner-content">
+      
+      <div class="demo-badge">
+        <span class="pulse-dot"></span>
+        <span>AI ASSISTANT HERO INTRO</span>
+      </div>
+
+      <h1 class="demo-title">
+        Intelligent Workflows for <br>
+        <span class="gradient-text">Autonomous Enterprises</span>
+      </h1>
+
+      <p class="demo-subtitle">
+        Interactive audio-reactive waveforms, additive neon blending, procedural voice harmonics, and mouse parallax engineered for high-performance dark dashboards.
+      </p>
+
+      <div class="demo-actions">
+        <a href="#controls" class="btn btn-primary">
+          <span>Tune Waveform Settings</span>
+          <span>↓</span>
+        </a>
+        <a href="/instagram-dm-automation" class="btn btn-glass">
+          <span>View Instagram Service Page</span>
+          <span>→</span>
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- LIVE COMPONENT CONTROLS & API DEMO -->
+  <section class="controls-panel-section" id="controls">
+    <div class="controls-card">
+      
+      <div class="controls-header">
+        <h3>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          Component Live Customizer
+        </h3>
+        <span class="fps-badge" id="fpsDisplay">60 FPS · Smooth</span>
+      </div>
+
+      <!-- Controls Grid -->
+      <div class="controls-grid">
+        <!-- Wave Count -->
+        <div class="control-item">
+          <label for="ctrlWaves">Wave Count: <span class="val" id="valWaves">4</span></label>
+          <input type="range" id="ctrlWaves" min="1" max="5" value="4">
+        </div>
+
+        <!-- Wave Amplitude -->
+        <div class="control-item">
+          <label for="ctrlAmplitude">Base Amplitude: <span class="val" id="valAmplitude">32px</span></label>
+          <input type="range" id="ctrlAmplitude" min="10" max="65" value="32">
+        </div>
+
+        <!-- Animation Speed -->
+        <div class="control-item">
+          <label for="ctrlSpeed">Wave Speed: <span class="val" id="valSpeed">1.0x</span></label>
+          <input type="range" id="ctrlSpeed" min="0.2" max="2.5" step="0.1" value="1.0">
+        </div>
+
+        <!-- Mouse Influence / Disturbance -->
+        <div class="control-item">
+          <label for="ctrlMouse">Cursor Reaction: <span class="val" id="valMouse">38px</span></label>
+          <input type="range" id="ctrlMouse" min="0" max="80" value="38">
+        </div>
+
+        <!-- Glow Blur -->
+        <div class="control-item">
+          <label for="ctrlGlow">Neon Glow Blur: <span class="val" id="valGlow">16px</span></label>
+          <input type="range" id="ctrlGlow" min="0" max="30" value="16">
+        </div>
+      </div>
+
+      <!-- Layer Toggles -->
+      <div class="control-toggles">
+        <label class="toggle-pill">
+          <input type="checkbox" id="toggleGrid" checked>
+          <span>Subtle Radial Grid</span>
+        </label>
+        <label class="toggle-pill">
+          <input type="checkbox" id="toggleOrbs" checked>
+          <span>Drifting Ambient Glows</span>
+        </label>
+        <label class="toggle-pill">
+          <input type="checkbox" id="toggleBubbles" checked>
+          <span>Floating Glass Chat Cards</span>
+        </label>
+        <label class="toggle-pill">
+          <input type="checkbox" id="toggleGrain" checked>
+          <span>3% Film Grain Overlay</span>
+        </label>
+      </div>
+
+      <!-- Integration Code Snippet -->
+      <div class="code-preview">
+<span class="comment">// 1. Include CSS & JS files</span>
+&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"css/ai-hero-bg.css"</span>&gt;
+&lt;script src=<span class="string">"js/ai-hero-bg.js"</span>&gt;&lt;/script&gt;
+
+<span class="comment">// 2. Initialize in your Hero container</span>
+<span class="keyword">const</span> heroEl = document.querySelector(<span class="string">'#hero'</span>);
+<span class="keyword">const</span> aiBg = <span class="keyword">new</span> AiHeroBackground(heroEl, {
+  waveCount: <span class="val">4</span>,
+  baseAmplitude: <span class="val">32</span>,
+  speed: <span class="val">1.0</span>,
+  strokeColors: [<span class="string">'#7c3aed'</span>, <span class="string">'#3b82f6'</span>, <span class="string">'#22d3ee'</span>],
+  glowBlur: <span class="val">16</span>,
+  mouseInfluence: <span class="val">38</span>,
+  showBubbles: <span class="keyword">true</span>
+});
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Component Script -->
+  <script src="js/ai-hero-bg.js"></script>
+
+  <script>
+    // Initialize the AI Assistant Hero Background
+    const heroContainer = document.getElementById('demoHero');
+    const aiBg = new AiHeroBackground(heroContainer, {
+      waveCount: 4,
+      baseAmplitude: 32,
+      speed: 1.0,
+      strokeColors: ['#7c3aed', '#3b82f6', '#22d3ee'],
+      glowBlur: 16,
+      mouseInfluence: 38,
+      showGrid: true,
+      showBubbles: true,
+      showOrbs: true,
+      showGrain: true,
+      showVignette: true
+    });
+
+    // Wire up live controls
+    const ctrlWaves = document.getElementById('ctrlWaves');
+    const ctrlAmplitude = document.getElementById('ctrlAmplitude');
+    const ctrlSpeed = document.getElementById('ctrlSpeed');
+    const ctrlMouse = document.getElementById('ctrlMouse');
+    const ctrlGlow = document.getElementById('ctrlGlow');
+
+    const valWaves = document.getElementById('valWaves');
+    const valAmplitude = document.getElementById('valAmplitude');
+    const valSpeed = document.getElementById('valSpeed');
+    const valMouse = document.getElementById('valMouse');
+    const valGlow = document.getElementById('valGlow');
+
+    ctrlWaves.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value, 10);
+      valWaves.textContent = val;
+      aiBg.setOptions({ waveCount: val });
+    });
+
+    ctrlAmplitude.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value, 10);
+      valAmplitude.textContent = val + 'px';
+      aiBg.setOptions({ baseAmplitude: val });
+    });
+
+    ctrlSpeed.addEventListener('input', (e) => {
+      const val = parseFloat(e.target.value);
+      valSpeed.textContent = val.toFixed(1) + 'x';
+      aiBg.setOptions({ speed: val });
+    });
+
+    ctrlMouse.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value, 10);
+      valMouse.textContent = val + 'px';
+      aiBg.setOptions({ mouseInfluence: val });
+    });
+
+    ctrlGlow.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value, 10);
+      valGlow.textContent = val + 'px';
+      aiBg.setOptions({ glowBlur: val });
+    });
+
+    // Toggles
+    document.getElementById('toggleGrid').addEventListener('change', (e) => {
+      const grid = heroContainer.querySelector('.ai-hero-grid');
+      if (grid) grid.style.display = e.target.checked ? 'block' : 'none';
+    });
+
+    document.getElementById('toggleOrbs').addEventListener('change', (e) => {
+      const orbs = heroContainer.querySelector('.ai-hero-glow-layer');
+      if (orbs) orbs.style.display = e.target.checked ? 'block' : 'none';
+    });
+
+    document.getElementById('toggleBubbles').addEventListener('change', (e) => {
+      const bubbles = heroContainer.querySelector('.ai-floating-bubbles-layer');
+      if (bubbles) bubbles.style.display = e.target.checked ? 'block' : 'none';
+    });
+
+    document.getElementById('toggleGrain').addEventListener('change', (e) => {
+      const grain = heroContainer.querySelector('.ai-hero-grain');
+      if (grain) grain.style.display = e.target.checked ? 'block' : 'none';
+    });
+
+    // FPS Meter
+    let frameCount = 0;
+    let lastFpsTime = performance.now();
+    const fpsDisplay = document.getElementById('fpsDisplay');
+
+    function checkFps() {
+      frameCount++;
+      const now = performance.now();
+      if (now - lastFpsTime >= 1000) {
+        const fps = Math.round((frameCount * 1000) / (now - lastFpsTime));
+        fpsDisplay.textContent = `${fps} FPS · ${fps >= 55 ? 'Smooth 60fps' : 'Optimized'}`;
+        frameCount = 0;
+        lastFpsTime = now;
+      }
+      requestAnimationFrame(checkFps);
+    }
+    requestAnimationFrame(checkFps);
+  </script>
+</body>
+</html>

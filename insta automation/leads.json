@@ -1,0 +1,52 @@
+[
+  {
+    "id": "AUTOGRAM-IG-MUNN13KY-543",
+    "fullName": "Alex Morgan",
+    "businessName": "Morgan Media",
+    "email": "alex@morganmedia.com",
+    "instagramUsername": "@morganmedia",
+    "businessType": "Digital Marketing Agency",
+    "requirements": [
+      "Welcome Onboarding Flow",
+      "Comment-to-DM for Reels"
+    ],
+    "pricingTier": "Growth",
+    "status": "New Consultation Request",
+    "submittedAt": "2026-09-30T05:01:24.706Z",
+    "ip": "::1"
+  },
+  {
+    "id": "AUTOGRAM-IG-MUNNSCJ4-785",
+    "fullName": "Elena Rostova",
+    "businessName": "Luxe Aesthetics Studio",
+    "email": "elena@luxeaesthetics.com",
+    "instagramUsername": "@luxeaesthetics",
+    "businessType": "Coaching & Consulting",
+    "requirements": [
+      "Comment-to-DM for Reels",
+      "Conversational Lead Capture"
+    ],
+    "pricingTier": "Growth",
+    "status": "New Consultation Request",
+    "submittedAt": "2026-09-30T05:22:36.016Z",
+    "ip": "::1"
+  },
+  {
+    "id": "AUTOGRAM-MUNONV9L-969",
+    "fullName": "Jordan Taylor",
+    "businessName": "Apex Growth Studio",
+    "email": "jordan@apexgrowth.io",
+    "instagramUsername": "@apexgrowth",
+    "businessType": "Agency",
+    "requirements": [
+      "Automated Welcome Flow",
+      "Keyword Trigger Replies",
+      "Comment-to-DM on Reels",
+      "Conversational Lead Capture"
+    ],
+    "pricingTier": "GROWTH",
+    "status": "New Consultation Request",
+    "submittedAt": "2026-09-30T05:47:06.633Z",
+    "ip": "::1"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "name": "autogram-saas",
+  "version": "2.0.0",
+  "description": "AUTOGRAM - Premium Instagram DM Automation SaaS Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "autogram",
+    "instagram-automation",
+    "dm-automation",
+    "saas",
+    "lead-capture"
+  ],
+  "author": "AUTOGRAM",
+  "license": "ISC"
+}
