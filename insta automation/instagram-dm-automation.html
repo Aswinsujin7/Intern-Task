@@ -73,20 +73,34 @@
          2. HERO SECTION (Futuristic AI & Autonomous Technology)
          ========================================================================= -->
     <section class="hero-section" id="hero">
+      <!-- AI Automation Product Video Background with Cinematic Theme Blending -->
+      <div class="hero-video-wrapper" aria-hidden="true">
+        <video 
+          id="heroBgVideo" 
+          class="hero-bg-video" 
+          src="Autogram_promotional_video.mp4"
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          preload="auto">
+          <source src="Autogram_promotional_video.mp4" type="video/mp4">
+          <source src="Autogram_promotional_video_workf…_20261001101741.mp4" type="video/mp4">
+        </video>
+        <!-- Thematic Overlays for Ultra-Smooth Dark Cyber Theme Integration -->
+        <div class="hero-video-backdrop-tint"></div>
+        <div class="hero-video-fade-top"></div>
+        <div class="hero-video-fade-bottom"></div>
+        <div class="hero-video-fade-sides"></div>
+        <div class="hero-video-radial-vignette"></div>
+      </div>
+
       <!-- Subtle Glowing Canvas Particles in Background -->
       <canvas id="heroParticlesCanvas" class="hero-particles-canvas" aria-hidden="true"></canvas>
 
-      <!-- Ambient Nebula Blooms (Top Left & Top Right as in reference image) -->
+      <!-- Ambient Nebula Blooms (Top Left & Top Right) -->
       <div class="hero-vortex-bloom-left" aria-hidden="true"></div>
       <div class="hero-vortex-bloom-right" aria-hidden="true"></div>
-
-      <!-- Central Animated Swirling Cosmic Vortex Ring (from reference image) -->
-      <div class="cosmic-vortex-wrapper" id="cosmicVortexWrap" aria-hidden="true">
-        <div class="cosmic-vortex-glow"></div>
-        <div class="cosmic-vortex-ring vortex-ring-outer"></div>
-        <div class="cosmic-vortex-ring vortex-ring-core"></div>
-        <div class="cosmic-vortex-ring vortex-ring-inner"></div>
-      </div>
 
       <div class="container hero-container-relative">
         <div class="hero-content hero-content-centered">
@@ -121,6 +135,15 @@
           </div>
 
         </div>
+      </div>
+
+      <!-- Ambient Video Status / Play-Pause Luxury Pill Control -->
+      <div class="hero-video-control-wrap">
+        <button class="hero-video-pill-btn" id="heroVideoToggleBtn" aria-label="Toggle background video playback" title="Pause or Play AI Automation Video">
+          <span class="hero-video-live-dot" id="heroVideoLiveDot"></span>
+          <span class="hero-video-status-text" id="heroVideoStatusText">AI Live Preview</span>
+          <span class="hero-video-icon-indicator" id="heroVideoIcon">⏸</span>
+        </button>
       </div>
     </section>
 

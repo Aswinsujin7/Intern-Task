@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initScrollReveal();
+  initHeroVideo();
   initHeroParticles();
   initHeroParallax();
   initHeroMockup();
@@ -325,6 +326,106 @@ function initHeroParallax() {
     }
   }, { threshold: 0.05 });
   observer.observe(heroSection);
+}
+
+/* =========================================================================
+   1.6 HERO BACKGROUND VIDEO CONTROLLER (120 FPS & BATTERY OPTIMIZED)
+   ========================================================================= */
+function initHeroVideo() {
+  const video = document.getElementById('heroBgVideo');
+  const toggleBtn = document.getElementById('heroVideoToggleBtn');
+  const icon = document.getElementById('heroVideoIcon');
+  const statusText = document.getElementById('heroVideoStatusText');
+  const liveDot = document.getElementById('heroVideoLiveDot');
+  const heroSection = document.getElementById('hero');
+
+  if (!video) return;
+
+  // Set all attributes required by browser autoplay policies
+  video.muted = true;
+  video.defaultMuted = true;
+  video.setAttribute('muted', '');
+  video.playsInline = true;
+  video.setAttribute('playsinline', '');
+
+  function attemptPlay() {
+    if (video.dataset.manuallyPaused === 'true') return;
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        if (icon) icon.textContent = '⏸';
+        if (statusText) statusText.textContent = 'AI Live Preview';
+        if (liveDot) {
+          liveDot.style.background = '#10b981';
+          liveDot.style.boxShadow = '0 0 8px #10b981';
+        }
+      }).catch(() => {
+        // Autoplay policy waiting for user gesture
+      });
+    }
+  }
+
+  // 1. Immediate play attempt
+  attemptPlay();
+
+  // 2. Play on video load events
+  video.addEventListener('loadedmetadata', attemptPlay, { once: true });
+  video.addEventListener('loadeddata', attemptPlay, { once: true });
+  video.addEventListener('canplay', attemptPlay, { once: true });
+
+  // 3. Fallback on any user interaction (click, scroll, mousemove, touch, key)
+  const userGestureEvents = ['click', 'touchstart', 'scroll', 'mousemove', 'keydown'];
+  const onFirstInteraction = () => {
+    attemptPlay();
+    userGestureEvents.forEach(evt => window.removeEventListener(evt, onFirstInteraction));
+  };
+  userGestureEvents.forEach(evt => window.addEventListener(evt, onFirstInteraction, { passive: true }));
+
+  // Luxury Glass Pill Toggle: Pause / Play
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      if (video.paused) {
+        video.dataset.manuallyPaused = 'false';
+        video.play().then(() => {
+          if (icon) icon.textContent = '⏸';
+          if (statusText) statusText.textContent = 'AI Live Preview';
+          if (liveDot) {
+            liveDot.style.background = '#10b981';
+            liveDot.style.boxShadow = '0 0 8px #10b981';
+          }
+        }).catch(() => {});
+      } else {
+        video.dataset.manuallyPaused = 'true';
+        video.pause();
+        if (icon) icon.textContent = '▶';
+        if (statusText) statusText.textContent = 'Video Paused';
+        if (liveDot) {
+          liveDot.style.background = '#f59e0b';
+          liveDot.style.boxShadow = '0 0 8px #f59e0b';
+        }
+      }
+    });
+  }
+
+  // Battery & GPU Optimization: Pause when hero scrolls out of view, resume when visible
+  if ('IntersectionObserver' in window && heroSection) {
+    const videoObserver = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) {
+        if (!video.paused) {
+          video.pause();
+        }
+      } else {
+        if (video.dataset.manuallyPaused !== 'true') {
+          video.play().catch(() => {});
+        }
+      }
+    }, { threshold: 0.05 });
+
+    videoObserver.observe(heroSection);
+  }
 }
 
 /* =========================================================================

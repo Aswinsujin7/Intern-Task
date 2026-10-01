@@ -205,6 +205,25 @@ const requestHandler = (req, res) => {
     const contentType = MIME_TYPES[ext] || 'application/octet-stream';
     const total = stats.size;
 
+    res.setHeader('Accept-Ranges', 'bytes');
+
+    if (req.headers.range && ext === '.mp4') {
+      const range = req.headers.range;
+      const parts = range.replace(/bytes=/, '').split('-');
+      const start = parseInt(parts[0], 10);
+      const end = parts[1] ? parseInt(parts[1], 10) : total - 1;
+      const chunkSize = (end - start) + 1;
+
+      res.writeHead(206, {
+        'Content-Range': `bytes ${start}-${end}/${total}`,
+        'Accept-Ranges': 'bytes',
+        'Content-Length': chunkSize,
+        'Content-Type': contentType
+      });
+      fs.createReadStream(normalizedPath, { start, end }).pipe(res);
+      return;
+    }
+
     res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
 
     res.writeHead(200, {

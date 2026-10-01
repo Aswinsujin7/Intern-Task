@@ -477,6 +477,155 @@ a {
     linear-gradient(180deg, #04060d 0%, #060918 50%, #04060e 100%);
 }
 
+/* =========================================================================
+   HERO BACKGROUND VIDEO (AI AUTOMATION PRODUCT VIDEO)
+   Deep Cyber Theme Integration with Multi-Stage Ambient Vignettes
+   ========================================================================= */
+.hero-video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate3d(-50%, -50%, 0);
+  object-fit: cover;
+  object-position: center center;
+  /* Cinematic color grading matching deep dark cyber theme with high clarity */
+  filter: contrast(1.12) brightness(0.88) saturate(1.18);
+  opacity: 0.94;
+  will-change: transform;
+}
+
+/* 1. Backdrop Tint: Subtle brand violet & midnight navy ambient glow */
+.hero-video-backdrop-tint {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 65% 55% at 50% 50%, rgba(124, 58, 237, 0.12) 0%, rgba(6, 9, 24, 0.3) 60%, rgba(4, 6, 13, 0.7) 100%),
+    linear-gradient(180deg, rgba(4, 6, 13, 0.3) 0%, transparent 40%, rgba(4, 6, 13, 0.65) 100%);
+  pointer-events: none;
+}
+
+/* 2. Top Fade: Dissolves seamlessly into the navbar */
+.hero-video-fade-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(180deg, #04060d 0%, rgba(4, 6, 13, 0.82) 45%, transparent 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* 3. Bottom Fade: Smooth feather into next section */
+.hero-video-fade-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(0deg, #04060d 0%, rgba(4, 6, 13, 0.92) 45%, transparent 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* 4. Side Vignettes: Blends 16:9 edges cleanly on wide displays */
+.hero-video-fade-sides {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #04060d 0%, rgba(4, 6, 13, 0.65) 12%, transparent 28%, transparent 72%, rgba(4, 6, 13, 0.65) 88%, #04060d 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* 5. Center Radial Vignette: Balanced focus keeping video crisp and text 100% legible */
+.hero-video-radial-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 78% 68% at 50% 48%, rgba(4, 6, 13, 0.22) 0%, rgba(4, 6, 13, 0.48) 58%, rgba(4, 6, 13, 0.9) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Ambient Video Play/Pause Luxury Glass Pill */
+.hero-video-control-wrap {
+  position: absolute;
+  bottom: 24px;
+  right: 32px;
+  z-index: 4;
+}
+
+.hero-video-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  color: #cbd5e1;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.hero-video-pill-btn:hover {
+  background: rgba(30, 41, 59, 0.88);
+  border-color: rgba(251, 191, 36, 0.4);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(251, 191, 36, 0.15), 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.hero-video-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulseLiveDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseLiveDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.hero-video-icon-indicator {
+  font-size: 0.72rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .hero-video-control-wrap {
+    bottom: 14px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .hero-video-radial-vignette {
+    background: radial-gradient(ellipse 90% 80% at 50% 50%, rgba(4, 6, 13, 0.45) 0%, rgba(4, 6, 13, 0.8) 60%, rgba(4, 6, 13, 0.96) 100%);
+  }
+}
+
 .hero-particles-canvas {
   position: absolute;
   top: 0;
@@ -484,7 +633,7 @@ a {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* Ambient Top Corner Purple Blooms (Matching Canva Reference - Pure Feathered Gradient) */
@@ -529,6 +678,8 @@ a {
   justify-content: center;
   contain: layout paint;
   will-change: transform;
+  opacity: 0.38;
+  mix-blend-mode: screen;
 }
 
 /* Soft Deep Nebula Aura */
@@ -624,7 +775,7 @@ a {
 
 .hero-container-relative {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .hero-content-centered {
@@ -634,9 +785,11 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 0 20px 0;
+  padding: 40px 24px 20px 24px;
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  background: radial-gradient(ellipse 70% 60% at 50% 45%, rgba(4, 6, 13, 0.45) 0%, rgba(4, 6, 13, 0.18) 60%, transparent 100%);
+  border-radius: 28px;
 }
 
 .hero-content-centered .badge-tag {
@@ -653,6 +806,7 @@ a {
   letter-spacing: -0.035em;
   color: var(--text-white);
   text-align: center;
+  text-shadow: 0 4px 32px rgba(0, 0, 0, 1), 0 2px 12px rgba(0, 0, 0, 0.95);
 }
 
 .hero-content-centered .hero-desc {
@@ -665,7 +819,7 @@ a {
   margin-right: auto;
   margin-bottom: 36px;
   text-align: center;
-  text-shadow: 0 2px 16px rgba(4, 6, 13, 0.95), 0 0 24px rgba(147, 51, 234, 0.25);
+  text-shadow: 0 3px 22px rgba(0, 0, 0, 1), 0 1px 8px rgba(0, 0, 0, 0.95);
 }
 
 .hero-content-centered .hero-desc .hero-highlight-yellow {
